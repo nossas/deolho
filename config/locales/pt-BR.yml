@@ -205,3 +205,8 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+    attributes:
+      post:
+        title: "Título"
+        body: "Texto"
+        image: "Imagem"

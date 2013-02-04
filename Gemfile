@@ -10,6 +10,8 @@ gem 'inherited_resources'
 gem 'slim'
 gem 'compass-columnal-plugin'
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.
