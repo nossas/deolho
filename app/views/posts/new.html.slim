@@ -1,8 +1,10 @@
 = form_for @post do |form|
+  h1 Novo Post
   = form.label :title
   = form.text_field :title
   = form.label :body
   = form.text_area :body
   = form.label :image
   = form.file_field :image
+  hr
   = form.submit "Criar post"

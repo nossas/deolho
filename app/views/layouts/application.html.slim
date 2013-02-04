@@ -5,7 +5,7 @@ html
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  body
+  body class="#{controller.controller_name} #{controller.action_name}"
     section.container.header
       section.row
         .meurio= link_to image_tag("MR-logo.png"), "http://meurio.org.br/"

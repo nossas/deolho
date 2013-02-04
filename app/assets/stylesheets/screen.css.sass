@@ -53,3 +53,34 @@ section.header
       margin-right: .5em
       position: relative
       top: 7px
+
+input[type='submit']
+  background: $flamingo
+  border: 1px solid darken($flamingo, 10%)
+  color: white
+  font-weight: bold
+  padding: 5px 20px 7px 20px
+  cursor: pointer
+  font-size: .9em
+  +border-radius(5px)
+  +text-shadow(0 1px 1px black)
+  +background-image(linear-gradient($flamingo, darken($flamingo, 10%)))
+
+h1
+  font-size: 2em
+  font-weight: bold
+  color: $mercury
+
+input[type="text"], textarea
+  padding: 5px
+  outline: none
+  border: 2px solid $mercury
+  +transition(.5s)
+  &:focus
+    border-color: $flamingo
+
+hr
+  border: none
+  border-top: 2px $mercury solid
+  margin-top: 1em
+  margin-bottom: .5em
