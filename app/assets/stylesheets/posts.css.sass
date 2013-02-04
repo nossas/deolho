@@ -1,0 +1,34 @@
+@import columnal/grid
+@import colors
+
+.highlight
+  +grid(8)
+  .image
+    position: relative
+    overflow: hidden
+    padding-top: 6px
+    .highlight_tag
+      position: absolute
+      top: 0
+      left: 20px
+    a
+      img
+        width: 100%
+    .caption
+      padding: 1.5em
+      color: white
+      position: absolute
+      bottom: 0
+      background: rgba(0, 0, 0, .5)
+      .title
+        font-size: 2em
+        margin-bottom: .25em
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+      .icon-chat
+        margin-left: 1em
+        &:before
+          color: $flamingo
