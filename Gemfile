@@ -8,7 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'inherited_resources'
 gem 'slim'
-gem 'compass-columnal-plugin'
+gem 'compass-columnal-plugin', :git => "git://github.com/diogob/compass-columnal-plugin.git"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'omniauth-facebook'
