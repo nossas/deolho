@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'inherited_resources'
 gem 'slim'
+gem 'compass-columnal-plugin'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'omniauth-facebook'
@@ -18,7 +19,6 @@ gem 'cancan'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'compass-columnal-plugin', :git => "git://github.com/diogob/compass-columnal-plugin.git"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
