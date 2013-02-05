@@ -41,3 +41,11 @@ end
 When /^I press "(.*?)"$/ do |arg1|
   click_button arg1
 end
+
+Given /^there is a wiki word$/ do
+  @word = Word.make!
+end
+
+Then /^I should see this word in wiki widget$/ do
+  page.should have_css(".wiki_widget a", :text => @word.title)
+end

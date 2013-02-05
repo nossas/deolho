@@ -3,7 +3,7 @@
 
 body.posts.index
   .highlight
-    +grid(8)
+    +grid(9)
     .image
       position: relative
       overflow: hidden
@@ -33,6 +33,31 @@ body.posts.index
           margin-left: 1em
           &:before
             color: $flamingo
+  .wiki_widget
+    +grid(3)
+    +last
+    padding-top: 6px
+    .bg
+      background: $mercury
+      color: darken($mercury, 45%)
+      padding: 1em
+      font-size: .9em
+      line-height: 1.2em
+      margin-top: -5px
+      +border-radius(5px)
+      +box-shadow(darken($mercury, 50%) 0 0 10px inset)
+      span
+        display: block
+        font-weight: bold
+      a
+        color: $cerulean
+        &.title
+          text-transform: uppercase
+          font-weight: bold
+          display: inline-block
+          margin-bottom: 1em
+      p
+        margin-bottom: 1em
 
 body.posts.new
   form.new_post
