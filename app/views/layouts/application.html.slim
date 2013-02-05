@@ -16,6 +16,8 @@ html
             - if can? :create, Post
               |  | 
               = link_to "+Novo post", new_post_path
+              |  | 
+              = link_to "+Nova wiki", new_word_path
         - else
           .login= link_to "Entrar", "/auth/facebook"
     .box

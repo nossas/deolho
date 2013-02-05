@@ -43,6 +43,8 @@ section.header
   margin-bottom: .5em
   .meurio
     +grid(6)
+    img
+      float: left
   .profile_panel, .login
     +grid(6)
     +last
@@ -84,3 +86,19 @@ hr
   border-top: 2px $mercury solid
   margin-top: 1em
   margin-bottom: .5em
+
+form
+  label, input[type='submit']
+    display: block
+  label
+    margin-top: 1em
+  input[type='text'], textarea
+    width: 100%
+    +box-sizing(border-box)
+
+body.words.new
+  form.new_word
+    +grid(6)
+    +grid-prefix(3)
+    input[name='word[title]']
+      font-size: 1.5em 

@@ -210,3 +210,7 @@ pt-BR:
         title: "Título"
         body: "Texto"
         image: "Imagem"
+      word:
+        title: "Palavra"
+        short_description: "Descrição curta"
+        long_description: "Descrição longa"

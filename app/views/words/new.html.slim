@@ -1,0 +1,9 @@
+= form_for @word do |form|
+  = form.label :title
+  = form.text_field :title
+  = form.label :short_description
+  = form.text_area :short_description
+  = form.label :long_description
+  = form.text_area :long_description
+  hr
+  = form.submit "Criar wiki"
