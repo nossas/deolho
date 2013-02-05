@@ -9,12 +9,13 @@ html
     section.container.header
       section.row
         .meurio= link_to image_tag("MR-logo.png"), "http://meurio.org.br/"
-        - if current_user && current_user.admin?
+        - if current_user
           .profile_panel
             = image_tag current_user.image
             = current_user.first_name
-            |  | 
-            = link_to "+Novo post", new_post_path
+            - if can? :create, Post
+              |  | 
+              = link_to "+Novo post", new_post_path
         - else
           .login= link_to "Entrar", "/auth/facebook"
     .box
