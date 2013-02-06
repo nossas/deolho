@@ -4,7 +4,7 @@ Feature: create a new post
   I want to create a new post
 
   @omniauth_test
-  Scenario: I'm logged in as admin
+  Scenario: when the form is valid
     Given I login as admin
     And I go to "the homepage"
     When I click "+Novo post"
@@ -14,3 +14,11 @@ Feature: create a new post
     And I select an image for the post
     When I press "Criar post"
     Then I should be in "this new post page"
+
+  @omniauth_test @javascript
+  Scenario: when the form is not valid
+    Given I login as admin
+    And I go to "the homepage"
+    And I click "+Novo post"
+    When I press "Criar post"
+    Then I should see the error messages

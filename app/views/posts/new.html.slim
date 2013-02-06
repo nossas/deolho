@@ -1,10 +1,9 @@
-= form_for @post do |form|
+= form_for @post, :validate => true do |form|
   h1 Novo Post
-  = form.label :title
+  = form.label :title, :class => "required"
   = form.text_field :title
-  = form.label :body
+  = form.label :body, :class => "required"
   = form.text_area :body
-  = form.label :image
+  = form.label :image, :class => "required"
   = form.file_field :image
-  hr
   = form.submit "Criar post"
