@@ -111,9 +111,51 @@ form
     width: 100%
     +box-sizing(border-box)
 
+.header2
+  margin-bottom: 1.5em
+
+.menu
+  position: relative
+  width: 952px
+  left: -36px
+  background: $flamingo
+  padding: 10px 40px
+  padding-top: 13px
+  margin-bottom: 1.5em
+  &:before, &:after
+    content: ' '
+    position: absolute
+    width: 0
+    height: 0
+    left: 0px
+    top: 100%
+    border-width: 8px 8px
+    border-style: solid
+    border-color: darken($flamingo, 15%) darken($flamingo, 15%) transparent transparent
+  &:after
+    left: 1016px
+    +rotate(270deg)
+  a
+    color: white
+    text-transform: uppercase
+    margin-left: 10px
+    font-weight: bold
+    +text-shadow(gray 0 1px 1px)
+    &:after
+      margin-left: 10px
+      font-size: 1.5em
+      line-height: 0
+      content: "·"
+    &:last-child
+      &:after
+        content: none
+
+.row.visible
+  overflow: visible
+
 body.words.new
   form.new_word
     +grid(6)
     +grid-prefix(3)
     input[name='word[title]']
-      font-size: 1.5em 
+      font-size: 1.5em
