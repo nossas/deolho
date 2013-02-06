@@ -1,9 +1,10 @@
-= form_for @word do |form|
-  = form.label :title
+= form_for @word, :validate => true do |form|
+  h1 Nova Wiki
+  = form.label :title, :class => "required"
   = form.text_field :title
-  = form.label :short_description
+  = form.label :short_description, :class => "required"
   = form.text_area :short_description
-  = form.label :long_description
+  = form.label :long_description, :class => "required"
   = form.text_area :long_description
   hr
   = form.submit "Criar wiki"

@@ -34,6 +34,7 @@ img
 .box
   background: white
   margin: 0 auto
+  margin-bottom: 1em
   width: 960px
   padding: 20px
   +box-shadow(lightgray 0 0 5px)
@@ -92,6 +93,14 @@ form
     display: block
   label
     margin-top: 1em
+    &.message
+      margin: 0
+      color: red
+    &.required
+      &:after
+        margin-left: .25em
+        content: "*"
+        color: red
   input[type='text'], textarea
     width: 100%
     +box-sizing(border-box)

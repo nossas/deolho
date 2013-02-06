@@ -14,3 +14,11 @@ Feature: create a new wiki
     And I fill "Descrição longa" with "Maecenas faucibus mollis interdum."
     When I press "Criar wiki"
     Then I should be in "this new wiki page"
+
+  @omniauth_test @javascript
+  Scenario: when the form is not valid
+    Given I login as admin
+    And I go to "the homepage"
+    And I click "+Nova wiki"
+    When I press "Criar wiki"
+    Then I should see the error messages

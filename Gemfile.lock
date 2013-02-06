@@ -44,6 +44,7 @@ GEM
     childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
+    client_side_validations (3.2.1)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -208,6 +209,7 @@ PLATFORMS
 DEPENDENCIES
   cancan
   carrierwave
+  client_side_validations
   compass-columnal-plugin
   compass-rails
   cucumber-rails

@@ -49,3 +49,7 @@ end
 Then /^I should see this word in wiki widget$/ do
   page.should have_css(".wiki_widget a", :text => @word.title)
 end
+
+Then /^I should see the error messages$/ do
+  page.should have_css("form .field_with_errors")
+end
