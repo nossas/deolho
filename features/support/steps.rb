@@ -53,3 +53,9 @@ end
 Then /^I should see the error messages$/ do
   page.should have_css("form .field_with_errors")
 end
+
+Then /^I should see (\d+) posts in the latest posts list$/ do |arg1|
+  within(".latest_posts") do
+    should have_css(".post", :count => arg1.to_i)
+  end
+end

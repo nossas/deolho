@@ -1,0 +1,10 @@
+.post
+  .image= link_to image_tag(post.image), post
+  .info
+    h2= link_to post.title, post
+    span.date_and_comments
+      = l post.created_at, :format => :short
+      span.icon-chat
+        fb:comments-count href=post_url(post)
+    .body= truncate(strip_tags(post.body), length: 400)
+    .tags= render post.tags

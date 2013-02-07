@@ -2,6 +2,7 @@ Deolho::Application.routes.draw do
   root :to => 'posts#index'
   resources :posts
   resources :words
+  resources :tags
   match '/auth/:provider/callback',   :to => 'sessions#create'
 
   # The priority is based upon order of creation:

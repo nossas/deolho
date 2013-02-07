@@ -15,6 +15,8 @@ gem 'omniauth-facebook'
 gem 'fog'
 gem 'cancan'
 gem 'client_side_validations'
+gem 'jquery-ui-rails'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,21 +1,34 @@
-.highlight
-  .image
-    - if @highlight_post
-      = link_to image_tag(@highlight_post.image), @highlight_post 
-      = image_tag "star-tag-destaque.png", :class => "highlight_tag"
-      .caption
-        .title= link_to @highlight_post.title, @highlight_post
-        .stats
-          = distance_of_time_in_words_to_now(@highlight_post.created_at)
-          |  atrás
-          span.icon-chat
-            fb:comments-count href=request.url
+section.container.highlight_and_wiki_widget
+  section.row
+    .highlight
+      .image
+        - if @highlight_post
+          = link_to image_tag(@highlight_post.image), @highlight_post 
+          = image_tag "star-tag-destaque.png", :class => "highlight_tag"
+          .caption
+            .title= link_to @highlight_post.title, @highlight_post
+            .stats
+              = distance_of_time_in_words_to_now(@highlight_post.created_at)
+              |  atrás
+              span.icon-chat
+                fb:comments-count href=request.url
+    
+    .wiki_widget
+      = image_tag "wiki-widget-header.png"
+      - if @wiki_word
+        .bg
+          span O que é...
+          = link_to @wiki_word.title, @wiki_word, :class => "title"
+          = simple_format(@wiki_word.short_description)
+          = link_to "Visite nossa Wiki", words_path
 
-.wiki_widget
-  = image_tag "wiki-widget-header.png"
-  - if @wiki_word
-    .bg
-      span O que é...
-      = link_to @wiki_word.title, @wiki_word, :class => "title"
-      = simple_format(@wiki_word.short_description)
-      = link_to "Visite nossa Wiki", words_path
+section.container
+  section.row.visible
+    .title_flag
+      span.icon-clock Últimas Notícias
+
+section.container
+  section.row
+    .latest_posts
+      = render collection
+      = paginate collection

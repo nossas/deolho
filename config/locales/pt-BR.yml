@@ -214,3 +214,10 @@ pt-BR:
         title: "Palavra"
         short_description: "Descrição curta"
         long_description: "Descrição longa"
+  views:
+    pagination:
+      first: "&laquo; Primeira"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Próxima &rsaquo;"
+      truncate: "..."

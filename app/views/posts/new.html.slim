@@ -6,4 +6,7 @@
   = form.text_area :body
   = form.label :image, :class => "required"
   = form.file_field :image
+  = form.label :tags
+  = text_field_tag "tagit"
+  = content_tag :div, nil, "data-tags" => Tag.all.map{|t| t.name}.join(","), :id => "tags"
   = form.submit "Criar post"

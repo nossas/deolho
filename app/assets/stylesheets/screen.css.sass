@@ -23,6 +23,8 @@ section.row
 a
   color: $flamingo
   text-decoration: none
+  &:hover
+    text-decoration: underline
 
 body
   font-family: "Proxima Nova"
@@ -79,14 +81,6 @@ h1
   font-weight: bold
   color: $mercury
 
-input[type="text"], textarea
-  padding: 5px
-  outline: none
-  border: 2px solid $mercury
-  +transition(.5s)
-  &:focus
-    border-color: $flamingo
-
 hr
   border: none
   border-top: 2px $mercury solid
@@ -107,14 +101,23 @@ form
         margin-left: .25em
         content: "*"
         color: red
-  input[type='text'], textarea
+  input[type='text'], textarea, .tagit
     width: 100%
     +box-sizing(border-box)
+    padding: 5px
+    outline: none
+    border: 2px solid $mercury
+    +transition(.5s)
+    &:focus
+      border-color: $flamingo
+  .tagit
+    font-size: .9em
+    +border-radius(0)
 
 .header2
   margin-bottom: 1.5em
 
-.menu
+.title_flag
   position: relative
   width: 952px
   left: -36px
@@ -135,12 +138,13 @@ form
   &:after
     left: 1016px
     +rotate(270deg)
-  a
+  a, span
     color: white
     text-transform: uppercase
-    margin-left: 10px
     font-weight: bold
     +text-shadow(gray 0 1px 1px)
+  a
+    margin-left: 10px
     &:after
       margin-left: 10px
       font-size: 1.5em
@@ -152,6 +156,10 @@ form
 
 .row.visible
   overflow: visible
+
+span
+  &:before
+    margin-right: .5em
 
 body.words.new
   form.new_word
