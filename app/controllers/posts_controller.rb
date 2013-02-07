@@ -12,6 +12,6 @@ class PostsController < InheritedResources::Base
 
   protected
   def collection
-    end_of_association_chain.where("id <> ?", @highlight_post.id).page(params[:page]).per(5)
+    end_of_association_chain.where("id <> ?", @highlight_post.nil? ? 0 : @highlight_post.id).page(params[:page]).per(5)
   end
 end

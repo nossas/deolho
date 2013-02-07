@@ -59,3 +59,12 @@ Then /^I should see (\d+) posts in the latest posts list$/ do |arg1|
     should have_css(".post", :count => arg1.to_i)
   end
 end
+
+Given /^there is a post$/ do
+  @post = Post.make!
+end
+
+Then /^I should see all the content about this post$/ do
+  page.should have_content(@post.title)
+  page.should have_content(@post.body)
+end

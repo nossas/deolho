@@ -1,0 +1,17 @@
+= form_for @post, :validate => true do |form|
+  h1 Novo Post
+  = form.label :title, :class => "required"
+  = form.text_field :title
+  = form.label :body, :class => "required"
+  = form.text_area :body
+  .markdown_tips
+    strong= "**negrito**"
+    |  | 
+    em= "*itálico*"
+  - if @post.new_record?
+    = form.label :image, :class => "required"
+    = form.file_field :image
+    = form.label :tags
+    = text_field_tag "tagit"
+    = content_tag :div, nil, "data-tags" => Tag.all.map{|t| t.name}.join(","), :id => "tags"
+  = form.submit "Criar post"
