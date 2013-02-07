@@ -4,6 +4,7 @@
 $(function(){
   tag_list = $("#tags").attr("data-tags").split(",")
   $('#tagit').tagit({
-    availableTags: tag_list
+    availableTags: tag_list,
+    allowSpaces: true
   });
 });
