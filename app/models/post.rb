@@ -4,4 +4,8 @@ class Post < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   validates :body, :title, :image, :presence => true
   has_and_belongs_to_many :tags
+
+  def to_param
+    "#{self.id}-#{self.title.gsub(" ", "-").downcase}"
+  end
 end
