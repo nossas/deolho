@@ -6,6 +6,6 @@ class Post < ActiveRecord::Base
   has_and_belongs_to_many :tags
 
   def to_param
-    "#{self.id}-#{self.title.gsub(" ", "-").downcase}"
+    "#{self.id}-#{self.title.parameterize}"
   end
 end
