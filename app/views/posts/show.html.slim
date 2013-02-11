@@ -1,9 +1,19 @@
-= content_for(:title) { @post.title }
+= content_for(:tags) do
+  title= @post.title
+  meta property="og:title" content=@post.title
+  meta property="og:url" content=request.url
+  meta property="og:image" content=@post.image
+  meta property="og:site_name" content="De Olho"
+  meta property="og:description" content=@post.body
 
 section.container
   section.row
     .post
       h1= @post.title
+      .share
+        script type="IN/Share" "data-counter"="right"
+        a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-count="none" Tweetar
+        .fb-like "data-send"="false" "data-layout"="button_count" "data-width"="450" "data-show-faces"="false"
       = image_tag @post.image
       = raw(AutoHtml.auto_html(Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@post.body)) { simple_format; image; youtube(:width => "100%", :height => 400) })
       .clear
