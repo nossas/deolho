@@ -1,0 +1,8 @@
+.wiki_widget
+  = image_tag "wiki-widget-header.png"
+  - if @wiki_word
+    .bg
+      span O que é...
+      = link_to @wiki_word.title, @wiki_word, :class => "title"
+      = simple_format(@wiki_word.short_description)
+      = link_to "Visite nossa Wiki", words_path

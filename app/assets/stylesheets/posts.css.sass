@@ -40,28 +40,6 @@ body.posts.index
   .wiki_widget
     +grid(3)
     +last
-    padding-top: 6px
-    .bg
-      background: $mercury
-      color: darken($mercury, 45%)
-      padding: 1em
-      font-size: .9em
-      line-height: 1.2em
-      margin-top: -5px
-      +border-radius(5px)
-      +box-shadow(darken($mercury, 50%) 0 0 10px inset)
-      span
-        display: block
-        font-weight: bold
-      a
-        color: $cerulean
-        &.title
-          text-transform: uppercase
-          font-weight: bold
-          display: inline-block
-          margin-bottom: 1em
-      p
-        margin-bottom: 1em
   .latest_posts
     +grid(9)
     .post
@@ -158,3 +136,6 @@ body.posts.show
         &:last-child
           &:after
             content: none
+  .wiki_widget
+    +grid(3)
+    +last
