@@ -42,56 +42,29 @@ body.posts.index
     +last
   .latest_posts
     +grid(9)
-    .post
+    .post_item
       +grid-subcolumn(9, 9)
-      padding-bottom: 1em
-      margin-top: 1em
-      border-bottom: 2px dotted $mercury
-      .image
-        +grid-subcolumn(9, 4)
-      .info
-        +grid-subcolumn(9, 5)
-        +last
-      h2
-        font-size: 1.5em
-        font-weight: bold
-        a
-          color: black
-      .date_and_comments
-        color: darken($mercury, 40%)
-        font-size: .8em
-        display: inline-block
-        margin-bottom: 1em
-        .icon-chat
-          margin-left: 1em
-      .body
-        font-size: .9em
-        margin-bottom: 1em
-      .tags
-        border-top: 2px $mercury solid
-        padding-top: .25em
-        a
-          margin-right: .5em
-          font-size: .9em
-          &:after
-            content: "·"
-            margin-left: .5em
-          &:last-child
-            &:after
-              content: none
-    nav.pagination
-      +grid-subcolumn(9, 9)
-      margin-top: 1em
-      span
-        display: inline-block
-        padding: .5em 1em
-        background: $mercury
-        a
-          color: darken($mercury, 30%)
-        &.current
-          background: $flamingo
-          color: white
-          +text-shadow(black 0 1px 1px)
+  .top_tags
+    +grid(3)
+    +last
+    a
+      margin-right: .5em
+      display: inline-block
+      color: darken($mercury, 50%)
+      &:hover
+        color: $flamingo
+    h2
+      background: $flamingo
+      color: white
+      text-transform: uppercase
+      padding: 7px 5px 5px 5px
+      &:before
+        margin-right: .25em
+      +text-shadow(gray 0 1px 1px)
+    .tags
+      background: $mercury
+      padding: .5em
+      font-size: .9em
 
 body.posts.new
   form.new_post

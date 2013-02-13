@@ -24,3 +24,6 @@ section.container
     .latest_posts
       = render collection
       = paginate collection
+    .top_tags
+      h2.icon-star Assuntos Populares
+      .tags= render Tag.by_popularity.limit(20)

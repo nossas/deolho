@@ -25,7 +25,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-chat:before, .icon-clock:before {
+.icon-chat:before, .icon-clock:before, .icon-star:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -38,4 +38,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-clock:before {
 	content: "\e001";
+}
+.icon-star:before {
+	content: "\e002";
 }
