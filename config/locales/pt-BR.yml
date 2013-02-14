@@ -214,6 +214,8 @@ pt-BR:
         title: "Palavra"
         short_description: "Descrição curta"
         long_description: "Descrição longa"
+    models:
+      post: "Post"
   views:
     pagination:
       first: "&laquo; Primeira"

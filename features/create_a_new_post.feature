@@ -12,7 +12,7 @@ Feature: create a new post
     Given I fill "Título" with "Tiririca conta piada para Romário durante eleição na Câmara"
     And I fill "Texto" with "Um momento de descontração durante votação para disputa de novo presidente da Câmara dos Deputados"
     And I select an image for the post
-    When I press "Criar post"
+    When I press "Criar Post"
     Then I should be in "this new post page"
 
   @omniauth_test @javascript
@@ -20,5 +20,5 @@ Feature: create a new post
     Given I login as admin
     And I go to "the homepage"
     And I click "+Novo post"
-    When I press "Criar post"
+    When I press "Criar Post"
     Then I should see the error messages

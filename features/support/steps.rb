@@ -76,3 +76,11 @@ end
 Then /^I should see the wiki word description$/ do
   page.should have_css(".long_description", :text => @word.long_description)
 end
+
+Then /^I should see the edit post link$/ do
+  page.should have_css("a", :text => "Editar post")
+end
+
+Then /^the post title should be "(.*?)"$/ do |arg1|
+  page.should have_css("h1", :text => @post.title)
+end
