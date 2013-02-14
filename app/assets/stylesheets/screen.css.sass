@@ -67,20 +67,16 @@ section.header
 
 input[type='submit']
   background: $flamingo
-  border: 1px solid darken($flamingo, 10%)
   color: white
   font-weight: bold
-  padding: 7px 20px
+  padding: 15px 20px
   cursor: pointer
   font-size: .9em
-  margin-bottom: 2px
-  +box-shadow(black 0 1px 1px, lighten($flamingo, 25%) 0 1px 1px inset)
+  border: none
+  text-transform: uppercase
   +border-radius(5px)
-  +text-shadow(0 1px 1px black)
-  +background-image(linear-gradient($flamingo, darken($flamingo, 10%)))
   &:hover
     background: lighten($flamingo, 20%)
-    +background-image(linear-gradient(lighten($flamingo, 5%), darken($flamingo, 5%)))
 
 h1
   color: darken($mercury, 60%)
