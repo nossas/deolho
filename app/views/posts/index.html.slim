@@ -25,5 +25,5 @@ section.container
       = render collection
       = paginate collection
     .top_tags
-      h2.icon-star Assuntos Populares
+      h2.icon-star Mais Populares
       .tags= render Tag.by_popularity.limit(20)

@@ -138,6 +138,7 @@ form
   padding: 10px 40px
   padding-top: 13px
   margin-bottom: 25px
+  +box-shadow(darken($flamingo, 10%) 0 -2px 4px inset)
   &:before, &:after
     content: ' '
     position: absolute
@@ -168,6 +169,12 @@ form
     &:last-child
       &:after
         content: none
+  span
+    &:before
+      font-size: 1.5em
+      vertical-align: middle
+      top: -3px
+      position: relative
 
 .row.visible
   overflow: visible
@@ -186,7 +193,7 @@ span
     line-height: 1.2em
     margin-top: -5px
     +border-radius(5px)
-    +box-shadow(darken($mercury, 50%) 0 0 10px inset)
+    +box-shadow(darken($mercury, 20%) 0 0 10px inset)
     span
       display: block
       font-weight: bold
@@ -223,6 +230,9 @@ span
     margin-bottom: 1em
     .icon-chat
       margin-left: 1em
+      &:before
+        margin-right: 0
+        vertical-align: middle
   .body
     font-size: .9em
     margin-bottom: 1em
@@ -231,7 +241,9 @@ span
     padding-top: .25em
     a
       margin-right: .5em
-      font-size: .9em
+      font-size: 11px
+      &:hover
+        text-decoration: none
       &:after
         content: "·"
         margin-left: .5em
@@ -326,6 +338,8 @@ body.posts.index
           margin-left: 1em
           &:before
             color: $flamingo
+            margin-right: 0
+            vertical-align: middle
   .wiki_widget
     +grid(3)
     +last
