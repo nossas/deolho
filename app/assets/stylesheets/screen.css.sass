@@ -303,71 +303,69 @@ body.words.show
     +last
 
 body.posts.index
-  .highlight_and_wiki_widget
-    margin-bottom: 25px
-  .highlight
-    +grid(9)
-    .image
-      position: relative
-      overflow: hidden
-      padding-top: 6px
-      .highlight_tag
-        position: absolute
-        top: 0
-        left: 20px
-      a
-        img
-          width: 100%
-      .caption
-        padding: 1.5em
-        color: white
-        position: absolute
-        bottom: 0
-        background: rgba(0, 0, 0, .5)
-        width: 100%
-        +box-sizing(border-box)
-        .title
-          font-size: 2em
-          margin-bottom: .25em
-          a
-            color: white
-            text-decoration: none
-            &:hover
-              text-decoration: underline
-        .icon-chat
-          margin-left: 1em
-          &:before
-            color: $flamingo
-            margin-right: 0
-            vertical-align: middle
-  .wiki_widget
-    +grid(3)
-    +last
-  .latest_posts
+  .posts
     +grid(9)
     .post_item
       +grid-subcolumn(9, 9)
-  .top_tags
+    .highlight
+      margin-bottom: 2em
+      .image
+        position: relative
+        overflow: hidden
+        padding-top: 6px
+        .highlight_tag
+          position: absolute
+          top: 0
+          left: 20px
+        a
+          img
+            width: 100%
+        .caption
+          padding: 1.5em
+          color: white
+          position: absolute
+          bottom: 0
+          background: rgba(0, 0, 0, .5)
+          width: 100%
+          +box-sizing(border-box)
+          .title
+            font-size: 2em
+            margin-bottom: .25em
+            a
+              color: white
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+          .icon-chat
+            margin-left: 1em
+            &:before
+              color: $flamingo
+              margin-right: 0
+              vertical-align: middle
+  .side_bar
     +grid(3)
     +last
-    a
-      margin-right: .5em
-      display: inline-block
-      color: darken($mercury, 50%)
-      &:hover
-        color: $flamingo
-    h2
-      background: $flamingo
-      color: white
-      text-transform: uppercase
-      padding: 7px 5px 5px 5px
-      &:before
-        margin-right: .25em
-      +text-shadow(gray 0 1px 1px)
-    .tags
-      background: $mercury
-      padding: .5em
-      font-size: .9em
+    .wiki_widget
+      margin-bottom: 1em
+    .top_tags
+      a
+        margin-right: .5em
+        display: inline-block
+        color: darken($mercury, 50%)
+        &:hover
+          color: $flamingo
+      h2
+        background: $flamingo
+        color: white
+        text-transform: uppercase
+        padding: 7px 5px 5px 5px
+        &:before
+          margin-right: .25em
+        +text-shadow(gray 0 1px 1px)
+      .tags
+        background: $mercury
+        padding: 1em
+        font-size: .9em
 
 body.posts.new, body.posts.edit
   h1

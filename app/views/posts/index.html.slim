@@ -1,29 +1,23 @@
 section.container.highlight_and_wiki_widget
   section.row
-    .highlight
-      .image
-        - if @highlight_post
-          = link_to image_tag(@highlight_post.image), @highlight_post 
-          = image_tag "star-tag-destaque.png", :class => "highlight_tag"
-          .caption
-            .title= link_to @highlight_post.title, @highlight_post
-            .stats
-              = distance_of_time_in_words_to_now(@highlight_post.created_at)
-              |  atrás
-              span.icon-chat
-                fb:comments-count href=request.url    
-    = render :file => "shared/wiki_widget"
-
-section.container
-  section.row.visible
-    .title_flag
-      span.icon-clock Últimas Notícias
-
-section.container
-  section.row
-    .latest_posts
-      = render collection
+    .posts
+      - if params[:page].nil?
+        .highlight
+          .image
+            - if @highlight_post
+              = link_to image_tag(@highlight_post.image), @highlight_post 
+              = image_tag "star-tag-destaque.png", :class => "highlight_tag"
+              .caption
+                .title= link_to @highlight_post.title, @highlight_post
+                .stats
+                  = distance_of_time_in_words_to_now(@highlight_post.created_at)
+                  |  atrás
+                  span.icon-chat
+                    fb:comments-count href=request.url    
+      .list= render collection
       = paginate collection
-    .top_tags
-      h2.icon-star Mais Populares
-      .tags= render Tag.by_popularity.limit(20)
+    .side_bar
+      = render :file => "shared/wiki_widget"
+      .top_tags
+        h2.icon-star Mais Populares
+        .tags= render Tag.by_popularity.limit(20)
