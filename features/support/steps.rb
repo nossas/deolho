@@ -68,3 +68,11 @@ Then /^I should see all the content about this post$/ do
   page.should have_content(@post.title)
   page.should have_content(@post.body)
 end
+
+Then /^I should see the wiki word$/ do
+  page.should have_css("h1", :text => @word.title)
+end
+
+Then /^I should see the wiki word description$/ do
+  page.should have_css(".long_description", :text => @word.long_description)
+end

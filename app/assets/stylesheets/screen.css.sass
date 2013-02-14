@@ -83,15 +83,22 @@ input[type='submit']
     +background-image(linear-gradient(lighten($flamingo, 5%), darken($flamingo, 5%)))
 
 h1
-  font-size: 2em
-  font-weight: bold
-  color: $mercury
+  color: darken($mercury, 60%)
+  font-weight: normal
+  margin-bottom: .5em
+  font-size: 2.5em
 
 hr
   border: none
   border-top: 2px $mercury solid
   margin-top: 1em
   margin-bottom: .5em
+
+p
+  margin-bottom: 1em
+  line-height: 1.2em
+  &:last-child
+    margin-bottom: 0
 
 form
   label, input[type='submit']
@@ -246,12 +253,13 @@ nav.pagination
       color: white
       +text-shadow(black 0 1px 1px)
 
-body.words.new
-  form.new_word
-    +grid(6)
-    +grid-prefix(3)
-    input[name='word[title]']
-      font-size: 1.5em
+.share
+  margin-bottom: 1em
+  .IN-widget, .twitter-share-button
+    margin-right: 1em
+  .fb-like
+    position: relative
+    top: 2px
 
 body.tags.show
   .posts
@@ -267,3 +275,17 @@ body.tags.show
     span
       color: $cerulean
       font-style: italic
+
+body.words.new
+  form.new_word
+    +grid(6)
+    +grid-prefix(3)
+    input[name='word[title]']
+      font-size: 1.5em
+
+body.words.show
+  .word
+    +grid(9)
+  .wiki_widget
+    +grid(3)
+    +last

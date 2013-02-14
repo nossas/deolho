@@ -4,5 +4,5 @@
     .bg
       span O que é...
       = link_to @wiki_word.title, @wiki_word, :class => "title"
-      = simple_format(@wiki_word.short_description)
+      = simple_format truncate(@wiki_word.short_description, :length => 400)
       = link_to "Visite nossa Wiki", words_path
