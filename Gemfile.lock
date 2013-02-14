@@ -138,6 +138,9 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     pg (0.14.1)
+    pg_search (0.5)
+      activerecord (>= 3)
+      activesupport (>= 3)
     polyglot (0.3.3)
     rack (1.4.4)
     rack-cache (1.2)
@@ -234,6 +237,7 @@ DEPENDENCIES
   mini_magick
   omniauth-facebook
   pg
+  pg_search
   rails (= 3.2.8)
   redcarpet
   rspec-rails (~> 2.0)

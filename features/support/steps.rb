@@ -55,7 +55,7 @@ Then /^I should see the error messages$/ do
 end
 
 Then /^I should see (\d+) posts in the latest posts list$/ do |arg1|
-  within(".latest_posts") do
+  within(".list") do
     should have_css(".post_item", :count => arg1.to_i)
   end
 end
@@ -83,4 +83,20 @@ end
 
 Then /^the post title should be "(.*?)"$/ do |arg1|
   page.should have_css("h1", :text => @post.title)
+end
+
+Then /^I should see a message saying that no post were found$/ do
+  page.should have_css(".empty")
+end
+
+Given /^there is a post called "(.*?)"$/ do |arg1|
+  Post.make! :title => arg1
+end
+
+Then /^I should see the post called "(.*?)"$/ do |arg1|
+  page.should have_css(".post_item", :text => arg1)
+end
+
+Then /^I should not see the post called "(.*?)"$/ do |arg1|
+  page.should_not have_css(".post_item", :text => arg1)
 end

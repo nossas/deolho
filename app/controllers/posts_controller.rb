@@ -11,6 +11,10 @@ class PostsController < InheritedResources::Base
 
   protected
   def collection
-    end_of_association_chain.where("id <> ?", @highlight_post.nil? ? 0 : @highlight_post.id).page(params[:page]).per(5)
+    if params[:search]
+      end_of_association_chain.search_by_full_text(params[:search]).page(params[:page]).per(5)
+    else
+      end_of_association_chain.where("id <> ?", @highlight_post.nil? ? 0 : @highlight_post.id).page(params[:page]).per(5)
+    end
   end
 end

@@ -19,6 +19,7 @@ gem 'jquery-ui-rails'
 gem 'kaminari'
 gem 'redcarpet'
 gem "auto_html"
+gem 'pg_search'
 
 # Gems used only for assets and not required
 # in production environments by default.

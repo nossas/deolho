@@ -35,6 +35,11 @@ html
       section.container.header2
         section.row
           .logo= link_to image_tag("header-blog-logo.png"), root_path
+          .search
+            = form_tag posts_path, :method => :get do
+              = label_tag "search", "Buscar por"
+              = text_field_tag :search, params[:search], :placeholder => "Procure aqui"
+              = submit_tag "Buscar"
       section.container
         section.row.visible
           .title_flag

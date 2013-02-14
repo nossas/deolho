@@ -1,7 +1,7 @@
 section.container.highlight_and_wiki_widget
   section.row
     .posts
-      - if params[:page].nil?
+      - if params[:page].nil? && params[:search].nil?
         .highlight
           .image
             - if @highlight_post
@@ -14,7 +14,14 @@ section.container.highlight_and_wiki_widget
                   |  atrás
                   span.icon-chat
                     fb:comments-count href=request.url    
-      .list= render collection
+      .list
+        - if params[:search]
+          h2
+            | Resultado da busca por 
+            em #{params[:search]}
+        = render collection
+        - if collection.empty?
+          .empty Nenhum post foi encontrado
       = paginate collection
     .side_bar
       = render :file => "shared/wiki_widget"

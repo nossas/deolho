@@ -129,6 +129,24 @@ form
 
 .header2
   margin-bottom: 1.5em
+  .logo
+    +grid(6)
+    img
+      float: left
+  .search
+    +grid(6)
+    +last
+    label, input[type="submit"]
+      display: none
+    input
+      margin-top: 15px
+      font-size: 1em
+      width: auto
+      float: right
+      background: $mercury
+      color: darken($mercury, 30%)
+      +border-radius(5px)
+      +box-shadow(darken($mercury, 20%) 0 -1px 1px, lighten($mercury, 50%) 0 0 1px inset)
 
 .title_flag
   position: relative
