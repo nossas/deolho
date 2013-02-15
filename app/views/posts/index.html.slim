@@ -25,6 +25,3 @@ section.container.highlight_and_wiki_widget
       = paginate collection
     .side_bar
       = render :file => "shared/wiki_widget"
-      .top_tags
-        h2.icon-star Mais Populares
-        .tags= render Tag.by_popularity.limit(20)
