@@ -12,7 +12,7 @@ Feature: create a new wiki
     Given I fill "Palavra" with "Condimentum"
     And I fill "Descrição curta" with "Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
     And I fill "Descrição longa" with "Maecenas faucibus mollis interdum."
-    When I press "Criar wiki"
+    When I press "Criar Wiki"
     Then I should be in "this new wiki page"
 
   @omniauth_test @javascript
@@ -20,5 +20,5 @@ Feature: create a new wiki
     Given I login as admin
     And I go to "the homepage"
     And I click "+Nova wiki"
-    When I press "Criar wiki"
+    When I press "Criar Wiki"
     Then I should see the error messages

@@ -216,6 +216,7 @@ pt-BR:
         long_description: "Descrição longa"
     models:
       post: "Post"
+      word: "Wiki"
   views:
     pagination:
       first: "&laquo; Primeira"

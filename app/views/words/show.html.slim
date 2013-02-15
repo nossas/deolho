@@ -10,6 +10,8 @@ section.container
   section.row
     .word
       h1= @word.title
+      - if can? :edit, @word
+        .word_panel= link_to "Editar wiki", edit_word_path(@word), :class => "btn"
       .share
         script type="IN/Share" "data-counter"="right"
         a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-count="none" Tweetar

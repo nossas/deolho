@@ -306,8 +306,8 @@ body.tags.show
       color: $cerulean
       font-style: italic
 
-body.words.new
-  form.new_word
+body.words.new, body.words.edit
+  form
     +grid(6)
     +grid-prefix(3)
     input[name='word[title]']
@@ -316,6 +316,8 @@ body.words.new
 body.words.show
   .word
     +grid(9)
+    .word_panel
+      margin-bottom: 1em
   .wiki_widget
     +grid(3)
     +last
