@@ -9,6 +9,10 @@ class PostsController < InheritedResources::Base
     super
   end
 
+  def destroy
+    destroy!(:notice => "Post removido com sucesso")
+  end
+
   protected
   def collection
     if params[:search]

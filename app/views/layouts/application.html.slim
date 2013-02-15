@@ -31,6 +31,10 @@ html
               = link_to "+Nova wiki", new_word_path
         - else
           .login= link_to "Entrar", "/auth/facebook"
+    - if flash[:notice]
+      section.container
+        section.row
+          .notice= flash[:notice]
     .box
       section.container.header2
         section.row

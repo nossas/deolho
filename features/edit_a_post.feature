@@ -6,7 +6,7 @@ Feature: edit a post
     And there is a post
     When I go to "this post page"
     Then I should see the edit post link
-    Given I click "Editar post"
+    Given I click "Editar"
     And I fill "Título" with "Teste de edição"
     When I press "Atualizar Post"
     Then I should be in "this post page"

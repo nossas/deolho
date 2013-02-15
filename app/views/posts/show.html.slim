@@ -10,8 +10,10 @@ section.container
   section.row
     .post
       h1= @post.title
-      - if can? :edit, @post
-        .post_panel= link_to "Editar post", edit_post_path(@post), :class => "btn"
+      - if can?(:edit, @post) && can?(:delete, @post)
+        .post_panel
+          = link_to "Editar", edit_post_path(@post), :class => "btn"
+          = link_to "Remover", post_path(@post), :class => "btn alert", :method => :delete
       .share
         script type="IN/Share" "data-counter"="right"
         a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-count="none" Tweetar

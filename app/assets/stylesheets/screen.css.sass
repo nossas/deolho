@@ -79,6 +79,10 @@ input[type='submit'], a.btn
   &:hover
     text-decoration: none
     background: lighten($flamingo, 10%)
+  &.alert
+    background: red
+    &:hover
+      background: lighten(red, 20%)
 
 h1
   color: darken($mercury, 60%)
@@ -292,6 +296,14 @@ nav.pagination
     position: relative
     top: -4px
 
+.notice
+  background: lighten(yellow, 30%)
+  border: 1px solid darken(yellow, 10%)
+  text-align: center
+  padding: 7px 5px 5px 5px
+  margin-bottom: .5em
+  font-weight: bold
+
 body.tags.show
   .posts
     +grid(9)
@@ -319,6 +331,8 @@ body.words.show
     +grid(9)
     .word_panel
       margin-bottom: 1em
+      a
+        margin-right: 1em
   .wiki_widget
     +grid(3)
     +last
@@ -408,6 +422,8 @@ body.posts.show
     font-size: .9em
     .post_panel
       margin-bottom: 1em
+      a
+        margin-right: 1em
     img
       float: left
       margin-right: 1em

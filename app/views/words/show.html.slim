@@ -10,8 +10,10 @@ section.container
   section.row
     .word
       h1= @word.title
-      - if can? :edit, @word
-        .word_panel= link_to "Editar wiki", edit_word_path(@word), :class => "btn"
+      - if can?(:edit, @word) && can?(:delete, @word)
+        .word_panel
+          = link_to "Editar", edit_word_path(@word), :class => "btn"
+          = link_to "Remover", word_path(@word), :class => "btn alert", :method => :delete, :confirm => "Tem certeza #{current_user.first_name}?"
       .share
         script type="IN/Share" "data-counter"="right"
         a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-count="none" Tweetar

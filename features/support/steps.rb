@@ -78,7 +78,7 @@ Then /^I should see the wiki word description$/ do
 end
 
 Then /^I should see the edit post link$/ do
-  page.should have_css("a", :text => "Editar post")
+  page.should have_css("a", :text => "Editar")
 end
 
 Then /^the post title should be "(.*?)"$/ do |arg1|
