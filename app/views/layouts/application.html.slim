@@ -15,7 +15,7 @@ html
       meta property="og:site_name" content="De Olho"
       meta property="og:description" content=""
 
-    link rel="shortcut icon" href=image_path("favicon-deolho.ico")
+    = favicon_link_tag "http://i.imgur.com/728VXnQ.png"
   body class="#{controller.controller_name} #{controller.action_name}"
     section.container.header
       section.row
@@ -44,7 +44,7 @@ html
         section.row.visible
           .title_flag
             = link_to "Home", root_path
-            = link_to "Wiki", words_path
+            = link_to "Traduz Aí", words_path
       = yield
       .clear
     #fb-root
