@@ -89,6 +89,7 @@ h1
   font-weight: normal
   margin-bottom: .5em
   font-size: 2.5em
+  margin-left: -2px
 
 hr
   border: none
@@ -406,7 +407,6 @@ body.posts.new, body.posts.edit
   h1
     +grid(6)
     +grid-prefix(3)
-    margin-left: -2px
     margin-bottom: 0
   form
     +grid(6)
@@ -453,3 +453,8 @@ body.words.index
     margin-bottom: 2em
     &:last-child
       +last
+
+body.pages.about
+  .about
+    +grid(6)
+    +grid-prefix(3)
