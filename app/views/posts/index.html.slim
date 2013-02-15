@@ -20,7 +20,7 @@ section.container.highlight_and_wiki_widget
             | Resultado da busca por 
             em #{params[:search]}
         = render collection
-        - if collection.empty?
+        - if collection.empty? && @highlight_post.nil?
           .empty Nenhum post foi encontrado
       = paginate collection
     .side_bar
