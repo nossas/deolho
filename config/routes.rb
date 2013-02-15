@@ -3,7 +3,15 @@ Deolho::Application.routes.draw do
   resources :posts
   resources :words
   resources :tags
-  match '/auth/:provider/callback',   :to => 'sessions#create'
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/vereador', :to => "pages#vereador", :as => "vereador"
+  match '/projeto_de_lei', :to => "pages#projeto_de_lei", :as => :projeto_de_lei
+  match '/participacao_popular', :to => "pages#participacao_popular", :as => :participacao_popular
+  match '/orcamento', :to => "pages#orcamento", :as => "orcamento"
+  match '/mandato', :to => "pages#mandato", :as => "mandato"
+  match '/eleicao', :to => "pages#eleicao"
+  match '/camara', :to => "pages#camara"
+  match '/about', :to => "pages#about", :as => "about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
