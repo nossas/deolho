@@ -7,10 +7,11 @@
     strong= "**negrito**"
     |  | 
     em= "*itálico*"
-  - if @post.new_record?
-    = form.label :image, :class => "required"
-    = form.file_field :image
-    = form.label :tags
-    = text_field_tag "tagit"
-    = content_tag :div, nil, "data-tags" => Tag.all.map{|t| t.name}.join(","), :id => "tags"
+  = form.label :image, :class => "required"
+  - if @post.persisted?
+    = image_tag @post.image
+  = form.file_field :image, :validate => @post.new_record?
+  = form.label :tags
+  = text_field_tag "tagit", @post.tags.map{|t| t.name}.join(",")
+  = content_tag :div, nil, "data-tags" => Tag.all.map{|t| t.name}.join(","), :id => "tags"
   = form.submit
