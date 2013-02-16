@@ -20,6 +20,7 @@ gem 'kaminari'
 gem 'redcarpet'
 gem "auto_html"
 gem 'pg_search'
+gem 'google-analytics-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
