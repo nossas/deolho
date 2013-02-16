@@ -10,10 +10,11 @@ $(function(){
     });
   }
 
-  $('a[title]').each(function(){
+  $('a[rel]').each(function(){
     $(this).qtip({
       content: {
-        url: $(this).attr('title')
+        text: "Carregando...",
+        url: $(this).attr('rel')
       },
       style: { 
         name: 'cream'
