@@ -53,6 +53,15 @@ html
             = link_to "Sobre Nós", about_path
       = yield
       .clear
+    section.container.footer
+      section.row
+        .facebook_share
+          .fb-like data-href="http://meurio.org.br/" data-send="false" data-width="290" data-show-faces="true"
+        .menu
+          = link_to "Home", root_path
+          = link_to "Quem Somos", about_path
+          = link_to "Traduz Aí", words_path
+        .copyright © 2013 Blog de Olho
     #fb-root
     javascript:
       (function(d, s, id) {
