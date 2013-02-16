@@ -332,6 +332,26 @@ nav.pagination
       margin-right: 1em
       font-weight: bold
 
+span.wiki
+  background: $cerulean
+  color: white
+  text-transform: uppercase
+  margin-left: -36px
+  position: relative
+  padding: 6px 10px 3px 36px
+  margin-bottom: 1em
+  display: inline-block
+  &:before
+    content: ' '
+    position: absolute
+    width: 0
+    height: 0
+    left: 0px
+    top: 100%
+    border-width: 8px 8px
+    border-style: solid
+    border-color: darken($cerulean, 15%) darken($cerulean, 15%) transparent transparent
+
 body.tags.show
   .posts
     +grid(9)
