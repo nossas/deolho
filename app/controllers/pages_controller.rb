@@ -8,10 +8,10 @@ class PagesController < ApplicationController
   def participacao_popular
   end
 
-  def orcamento_municipal
+  def orcamento
   end
 
-  def inicio_do_mandato
+  def mandato
   end
 
   def eleicao
