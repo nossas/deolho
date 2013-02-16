@@ -1,7 +1,9 @@
 Deolho::Application.routes.draw do
   root :to => 'posts#index'
   resources :posts
-  resources :words
+  resources :words do
+    get :qtip, :to => "words#qtip"
+  end
   resources :tags
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/vereador', :to => "pages#vereador", :as => "vereador"

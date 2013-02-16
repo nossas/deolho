@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery.qtip-1.0.0-rc3.min.js
 //= require rails.validations
 //= require tag-it.min
 //= require_tree .
