@@ -14,6 +14,9 @@ $(function(){
     $(this).qtip({
       content: {
         url: $(this).attr('title')
+      },
+      style: { 
+        name: 'cream'
       }
     });
   });
