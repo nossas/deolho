@@ -6,5 +6,5 @@
       = l post.created_at, :format => :short
       span.icon-chat
         fb:comments-count href=post_url(post)
-    .body= truncate(strip_tags(post.body), length: 200)
+    .body= truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit}), length: 200)
     .tags= render post.tags
