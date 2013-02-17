@@ -10,7 +10,7 @@ $(function(){
     });
   }
 
-  $('a[rel]').each(function(){
+  $('a.qtip').each(function(){
     $(this).qtip({
       content: {
         text: "Carregando...",
