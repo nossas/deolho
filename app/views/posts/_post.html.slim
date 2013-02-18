@@ -7,6 +7,6 @@
       span.icon-chat
         fb:comments-count href=post_url(post)
     .body
-      = truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit}), length: 200)
+      = truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit; simple_format}), length: 200)
       = link_to "continue lendo", post_path(post)
     .tags= render post.tags
