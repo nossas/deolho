@@ -268,6 +268,8 @@ span
   .body
     font-size: .9em
     margin-bottom: 1em
+    a
+      margin-left: .5em
   .tags
     border-top: 2px $mercury solid
     padding-top: .25em
@@ -353,6 +355,11 @@ span.wiki
     border-width: 8px 8px
     border-style: solid
     border-color: darken($cerulean, 15%) darken($cerulean, 15%) transparent transparent
+
+.empty
+  color: $mercury
+  font-size: 1.5em
+  margin-top: 1em
 
 body.tags.show
   .posts
@@ -492,6 +499,12 @@ body.posts.show
             content: none
         &:hover
           text-decoration: none
+    .comments
+      h3
+        font-weight: bold
+        font-size: 1.5em
+        color: $cerulean
+        margin-bottom: .5em
   .wiki_widget
     +grid(3)
     +last

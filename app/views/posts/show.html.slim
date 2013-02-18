@@ -4,7 +4,7 @@
   meta property="og:url" content=request.url
   meta property="og:image" content=@post.image
   meta property="og:site_name" content="De Olho"
-  meta property="og:description" content=@post.body
+  meta property="og:description" content=truncate(@post.body, :length => 160)
   meta property="og:type" content="article"
 
 section.container
@@ -25,5 +25,7 @@ section.container
       .tags
         | Tags: 
         = render @post.tags
-      .fb-comments data-href=request.url data-width="711" data-num-posts="10"
+      .comments
+        h3 O que você achou? Comente!
+        .fb-comments data-href=request.url data-width="711" data-num-posts="10"
     = render :file => "shared/wiki_widget"
