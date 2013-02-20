@@ -11,6 +11,7 @@ section.container
   section.row
     .post
       h1= @post.title
+      .created_at= l @post.created_at, :format => :long
       - if can?(:edit, @post) && can?(:delete, @post)
         .post_panel
           = link_to "Editar", edit_post_path(@post), :class => "btn"
