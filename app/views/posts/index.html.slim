@@ -13,7 +13,7 @@ section.container.highlight_and_wiki_widget
                   = distance_of_time_in_words_to_now(@highlight_post.created_at)
                   |  atrás
                   span.icon-chat
-                    fb:comments-count href=request.url    
+                    fb:comments-count href=post_url(@highlight_post)
       .list
         - if params[:search]
           h2
