@@ -9,6 +9,14 @@ class PostsController < InheritedResources::Base
     super
   end
 
+  def update
+    @post.tags = []
+    params[:tagit].split(",").each do |name|
+      @post.tags << Tag.find_or_create_by_name(name)
+    end
+    super
+  end
+
   def destroy
     destroy!(:notice => "Post removido com sucesso")
   end
