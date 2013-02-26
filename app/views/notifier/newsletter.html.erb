@@ -1,0 +1,17 @@
+<head>
+<style>
+p.date, h2 { margin:0; }
+p.date { color: gray }
+p.spam { font-size: .8em }
+a { color: orange }
+</style>
+</head>
+<body>
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post %></h2>
+  <p class="date"><%= l post.created_at, :format => :short %></p>
+  <p><%= raw truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit; redcarpet; simple_format;}), length: 200) %></p>
+<% end %>
+<hr />
+<p class="spam">Deseja cancelar o envio das atualizações? Basta responder este email, e se puder explicar o porque agradecemos :)</p>
+</body>

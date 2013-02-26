@@ -29,7 +29,7 @@ a
   text-decoration: none
   &:hover
     text-decoration: underline
-  &[rel]
+  &.qtip
     background: yellow
     color: black
     &:hover
@@ -73,6 +73,9 @@ section.header
       margin-right: .5em
       position: relative
       top: 7px
+    .btn
+      padding: 5px 20px
+      line-height: normal
 
 input[type='submit'], a.btn
   display: inline-block
@@ -306,12 +309,15 @@ nav.pagination
     top: -4px
 
 .notice
-  background: lighten(yellow, 30%)
-  border: 1px solid darken(yellow, 10%)
+  margin: 0 auto
+  width: 960px
+  background: lighten(orange, 35%)
   text-align: center
-  padding: 7px 5px 5px 5px
+  padding: 7px 20px 5px 20px
   margin-bottom: .5em
   font-weight: bold
+  section.container
+    padding: 0
 
 .footer
   font-size: .9em
@@ -362,6 +368,13 @@ span.wiki
 ul.bullet
   list-style: disc
   padding-left: 20px
+
+.popup
+  width: 390px
+
+.warning
+  background: lighten(orange, 35%)
+  padding: 5px
 
 body.tags.show
   .posts

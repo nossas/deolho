@@ -1,3 +1,5 @@
+# coding: utf-8
+
 Given /^there is (\d+) posts$/ do |arg1|
   arg1.to_i.times { |i| Post.make! :created_at => Time.now - i.day }
 end
@@ -99,4 +101,12 @@ end
 
 Then /^I should not see the post called "(.*?)"$/ do |arg1|
   page.should_not have_css(".post_item", :text => arg1)
+end
+
+Then /^I should see the subscription form$/ do
+  page.should have_css("form.new_subscriber")
+end
+
+Then /^I should see the subscription congrats message$/ do
+  page.should have_css(".notice", :text => "Pronto, agora senta e relaxa que enviaremos as atualizações do blog para o seu email.")
 end

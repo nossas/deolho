@@ -23,8 +23,8 @@ html
     section.container.header
       section.row
         .meurio= link_to image_tag("MR-logo.png"), "http://meurio.org.br/"
-        - if current_user
-          .profile_panel
+        .profile_panel
+          - if current_user
             = image_tag current_user.image
             = current_user.first_name
             - if can? :create, Post
@@ -32,10 +32,12 @@ html
               = link_to "+Novo post", new_post_path
               |  | 
               = link_to "+Nova wiki", new_word_path
+          - elsif(session[:email].nil?)
+            = link_to "Receber atualizações por email", new_subscriber_path, :rel => "facebox", :class => "btn"
     - if flash[:notice]
-      section.container
-        section.row
-          .notice= flash[:notice]
+      .notice
+        section.container
+          section.row= flash[:notice]
     .box
       section.container.header2
         section.row

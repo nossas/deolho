@@ -1,0 +1,8 @@
+.warning
+  | Se liga, as nossas atualizações são enviadas semanalmente. Você receberá toda 
+  strong segunda-feira 
+  | um email contendo as postagens da semana anterior.
+= form_for Subscriber.new do |form|
+  = form.label :email
+  = form.text_field :email
+  = form.submit "Enviar"

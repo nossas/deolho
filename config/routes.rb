@@ -5,6 +5,7 @@ Deolho::Application.routes.draw do
     get :qtip, :to => "words#qtip"
   end
   resources :tags
+  resources :subscribers, :only => [:new, :create]
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/vereador', :to => "pages#vereador", :as => "vereador"
   match '/projeto_de_lei', :to => "pages#projeto_de_lei", :as => :projeto_de_lei
