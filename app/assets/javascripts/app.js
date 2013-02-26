@@ -22,5 +22,8 @@ $(function(){
     });
   });
 
+  $(document).bind('reveal.facebox', function(){
+    $("form").enableClientSideValidations();
+  });
   $('a[rel*=facebox]').facebox();
 });
