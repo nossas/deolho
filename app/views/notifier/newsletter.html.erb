@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
-  <h2 style="margin:0; font-family:'Arial'"><%= link_to post.title, post, :style => "color:#000" %></h2>
-  <p style="color:#ccc; margin:0; font-family:'Arial'; font-size:.8em;"><%= l post.created_at, :format => :short %></p>
-  <p style="font-family:'Arial'; font-size:.8em;"><%= raw truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit; redcarpet; simple_format;}), length: 200) %></p>
+  <h2 style="margin:0; font-family:'Arial'; font-color:#000"><%= link_to post.title, post, :style => "color:#000" %></h2>
+  <p style="color:#ccc; margin:0; font-family:'Arial'; font-size:12px;"><%= l post.created_at, :format => :short %></p>
+  <p style="font-family:'Arial'; font-size:12px;"><%= raw truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit; redcarpet; simple_format;}), length: 200) %></p>
 <% end %>
 <hr />
-<p style="font-size:.8em; font-family:'Arial';">Deseja cancelar o envio das atualizações? Basta responder este email, e se puder explicar o porque agradecemos :)</p>
+<p style="font-size:10px; font-family:'Arial';">Deseja cancelar o envio das atualizações? Basta responder este email, e se puder explicar o porque agradecemos :)</p>
