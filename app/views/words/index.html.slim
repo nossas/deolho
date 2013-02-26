@@ -9,7 +9,7 @@ section.container
     .wiki_highlight= link_to image_tag("processo-04-projeto-de-lei.png"), projeto_de_lei_path
     .wiki_highlight= link_to image_tag("processo-05-orcamento.png"), orcamento_path
     .wiki_highlight= link_to image_tag("processo-06-popular.png"), participacao_popular_path
-  - if current_user.admin?
+  - if current_user && current_user.admin?
     section.row.words
       - Word.order(:title).each do |word|
         = link_to word.title, word
