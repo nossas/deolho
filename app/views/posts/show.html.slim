@@ -20,7 +20,7 @@ section.container
         script type="IN/Share" "data-counter"="right"
         a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-count="none" Tweetar
         .fb-like data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"
-      = image_tag @post.image
+      = image_tag @post.image, :class => "main"
       = raw(AutoHtml.auto_html(@post.body) { tipit; redcarpet; simple_format; image; youtube(:width => "100%", :height => 400) })
       .clear
       .tags
