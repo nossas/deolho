@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
-  <h2 style="margin:0; font-family:'Arial'; font-color:#000"><%= link_to post.title, post, :style => "color:#000" %></h2>
+  <h2 style="margin:0; font-family:'Arial'; font-color:#000"><%= link_to post.title, post_url(post), :style => "color:#000" %></h2>
   <p style="color:#ccc; margin:0; font-family:'Arial'; font-size:12px;"><%= l post.created_at, :format => :short %></p>
   <p style="font-family:'Arial'; font-size:12px;"><%= raw truncate(strip_tags(AutoHtml.auto_html(post.body) {tipit; redcarpet; simple_format;}), length: 200) %></p>
 <% end %>
