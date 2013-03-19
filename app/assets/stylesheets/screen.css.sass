@@ -38,8 +38,6 @@ a
 body
   font-family: "Proxima Nova"
   background: url("bg.png")
-  &.widget
-    background: none
 
 strong
   font-weight: bold
@@ -570,3 +568,11 @@ body.errors.not_found
       text-transform: uppercase
     h1
       font-size: 1.5em
+
+body.widget
+  background: none
+  .highlight
+    .caption
+      padding: .5em
+      .title
+        font-size: 1em
