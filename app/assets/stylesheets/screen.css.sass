@@ -38,6 +38,8 @@ a
 body
   font-family: "Proxima Nova"
   background: url("bg.png")
+  &.widget
+    background: none
 
 strong
   font-weight: bold
@@ -376,6 +378,41 @@ ul.bullet
   background: lighten(orange, 35%)
   padding: 5px
 
+.highlight
+  .image
+    position: relative
+    overflow: hidden
+    padding-top: 6px
+    .highlight_tag
+      position: absolute
+      top: 0
+      left: 20px
+    a
+      img
+        width: 100%
+    .caption
+      padding: 1.5em
+      color: white
+      position: absolute
+      bottom: 0
+      background: rgba(0, 0, 0, .5)
+      width: 100%
+      +box-sizing(border-box)
+      .title
+        font-size: 2em
+        margin-bottom: .25em
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline
+      .icon-chat
+        margin-left: 1em
+        &:before
+          color: $flamingo
+          margin-right: 0
+          vertical-align: middle
+
 body.tags.show
   .posts
     +grid(9)
@@ -414,40 +451,6 @@ body.posts.index
     +grid(9)
     .post_item
       +grid-subcolumn(9, 9)
-    .highlight
-      .image
-        position: relative
-        overflow: hidden
-        padding-top: 6px
-        .highlight_tag
-          position: absolute
-          top: 0
-          left: 20px
-        a
-          img
-            width: 100%
-        .caption
-          padding: 1.5em
-          color: white
-          position: absolute
-          bottom: 0
-          background: rgba(0, 0, 0, .5)
-          width: 100%
-          +box-sizing(border-box)
-          .title
-            font-size: 2em
-            margin-bottom: .25em
-            a
-              color: white
-              text-decoration: none
-              &:hover
-                text-decoration: underline
-          .icon-chat
-            margin-left: 1em
-            &:before
-              color: $flamingo
-              margin-right: 0
-              vertical-align: middle
   .side_bar
     +grid(3)
     +last

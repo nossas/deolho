@@ -1,6 +1,6 @@
 class PostsController < InheritedResources::Base
   load_and_authorize_resource
-  before_filter :only => [:index] { @highlight_post = Post.first }
+  before_filter :only => [:index, :highlight] { @highlight_post = Post.first }
 
   def create
     params[:tagit].split(",").each do |name|
@@ -19,6 +19,10 @@ class PostsController < InheritedResources::Base
 
   def destroy
     destroy!(:notice => "Post removido com sucesso")
+  end
+
+  def highlight
+    render :partial => "highlight", :layout => "widget"
   end
 
   protected

@@ -1,0 +1,12 @@
+.highlight
+  .image
+    - if @highlight_post
+      = link_to image_tag(@highlight_post.image), @highlight_post 
+      = image_tag "star-tag-destaque.png", :class => "highlight_tag"
+      .caption
+        .title= link_to @highlight_post.title, @highlight_post
+        .stats
+          = distance_of_time_in_words_to_now(@highlight_post.created_at)
+          |  atrás
+          span.icon-chat
+            fb:comments-count href=post_url(@highlight_post)

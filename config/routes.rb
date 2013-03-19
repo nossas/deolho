@@ -1,6 +1,9 @@
 Deolho::Application.routes.draw do
   root :to => 'posts#index'
+
+  get '/posts/highlight', :to => "posts#highlight"
   resources :posts
+
   resources :words do
     get :qtip, :to => "words#qtip"
   end
