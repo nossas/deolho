@@ -1,10 +1,10 @@
 .highlight
   .image
     - if @highlight_post
-      = link_to image_tag(@highlight_post.image), @highlight_post 
+      = link_to image_tag(@highlight_post.image), @highlight_post, :target => "_parent"
       = image_tag "star-tag-destaque.png", :class => "highlight_tag"
       .caption
-        .title= link_to @highlight_post.title, @highlight_post
+        .title= link_to @highlight_post.title, @highlight_post, :target => "_parent"
         .stats
           = distance_of_time_in_words_to_now(@highlight_post.created_at)
           |  atrás
