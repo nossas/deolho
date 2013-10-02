@@ -14,7 +14,7 @@ html
     meta property="fb:admins" content="536687842"
     meta property="keywords" content="Legislativo, Câmara, Vereadores, Vereança, Município, Municipal, Cidade, Rio de Janeiro, Acompanhamento, Fiscalização, Participação, Transparência, Projetos, Lei, Lei Orgânica, Regimento Interno, Carioca, Mesa Diretora, Quórum, Gabinete, Plenário, Ordem do Dia, Diário Oficial, Pedro Ernesto"
     meta property="description" content="Primeiro projeto de participação e acompanhamento da Câmara Municipal carioca de forma fácil e descomplicada."
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
     = favicon_link_tag "http://i.imgur.com/RFDtfyr.png"
@@ -63,6 +63,7 @@ html
           = link_to "Home", root_path
           = link_to "Quem Somos", about_path
           = link_to "Traduz Aí", words_path
+          = link_to "Olheiros", typeform_path
         .copyright © 2013 Blog de Olho
     #fb-root
     javascript:

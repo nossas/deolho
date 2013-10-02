@@ -18,6 +18,7 @@ Deolho::Application.routes.draw do
   match '/eleicao', :to => "pages#eleicao"
   match '/camara', :to => "pages#camara"
   match '/about', :to => "pages#about", :as => "about"
+  match '/typeform', :to => "pages#typeform", :as => "typeform"
   match "/404", :to => "errors#not_found"
 
   # The priority is based upon order of creation:

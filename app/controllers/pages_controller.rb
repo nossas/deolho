@@ -22,4 +22,7 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def typeform
+  end
 end

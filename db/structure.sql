@@ -202,8 +202,7 @@ CREATE TABLE users (
     image character varying(255),
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    admin boolean,
-    uid character varying(255)
+    admin boolean
 );
 
 
@@ -350,20 +349,6 @@ ALTER TABLE ONLY words
 
 
 --
--- Name: posts_to_tsvector_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX posts_to_tsvector_idx ON posts USING gin (to_tsvector('portuguese'::regconfig, (title)::text));
-
-
---
--- Name: posts_to_tsvector_idx1; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX posts_to_tsvector_idx1 ON posts USING gin (to_tsvector('portuguese'::regconfig, body));
-
-
---
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -389,7 +374,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130206182240');
 INSERT INTO schema_migrations (version) VALUES ('20130206182534');
 
 INSERT INTO schema_migrations (version) VALUES ('20130214231703');
-
-INSERT INTO schema_migrations (version) VALUES ('20130221205901');
 
 INSERT INTO schema_migrations (version) VALUES ('20130222205241');
