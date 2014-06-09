@@ -6,6 +6,7 @@
 
 @import compass/reset
 @import columnal/grid
+@import meurio_ui
 
 $mercury: #e4e4e4
 $flamingo: #f66530
@@ -59,10 +60,12 @@ img
 section.header
   margin-top: .5em
   margin-bottom: .5em
+  line-height: 38px
   .meurio
     +grid(6)
     img
       float: left
+      margin-right: 1em
   .profile_panel, .login
     +grid(6)
     +last
@@ -172,7 +175,7 @@ form
   padding-top: 13px
   margin-bottom: 25px
   +box-shadow(darken($flamingo, 10%) 0 -2px 4px inset)
-  &:before, &:after
+  &:before
     content: ' '
     position: absolute
     width: 0
@@ -182,9 +185,6 @@ form
     border-width: 8px 8px
     border-style: solid
     border-color: darken($flamingo, 15%) darken($flamingo, 15%) transparent transparent
-  &:after
-    left: 1016px
-    +rotate(270deg)
   a, span
     color: white
     text-transform: uppercase
@@ -576,3 +576,28 @@ body.widget
       padding: .5em
       .title
         font-size: 1em
+
+.alert
+  display: inline-block
+  position: relative
+  a.icon-warning
+    display: inline-block
+    line-height: 30px
+    text-decoration: none
+    &:before
+      position: relative
+      top: 1px
+  .f-dropdown.content.open
+    background: $orange
+    border: none
+    padding: .75em
+    color: white
+    font-size: .8em
+    line-height: normal
+    max-width: 250px
+    width: 250px
+    +border-radius(2px)
+    a
+      color: yellow
+    &:before
+      border-bottom-color: $orange

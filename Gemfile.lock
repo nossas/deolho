@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/meurio/meurio_ui.git
+  revision: e1d1bbda1f2e0901f40cc7e8d6d951eeab4616ca
+  branch: minhascidades
+  specs:
+    meurio_ui (1.4.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,6 +95,9 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.4)
+    foundation-rails (5.2.3.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     fssm (0.2.10)
     gherkin (2.11.6)
       json (>= 1.7.6)
@@ -239,12 +249,14 @@ DEPENDENCIES
   database_cleaner
   facebox-rails
   fog
+  foundation-rails
   google-analytics-rails
   inherited_resources
   jquery-rails (~> 2.1.4)
   jquery-ui-rails
   kaminari
   machinist (>= 2.0.0.beta2)
+  meurio_ui!
   mini_magick
   omniauth-facebook
   pg

@@ -64,3 +64,6 @@ gem "jquery-rails", "~> 2.1.4"
 
 # To use debugger
 # gem 'debugger'
+
+gem 'foundation-rails'
+gem 'meurio_ui', github: 'meurio/meurio_ui', branch: 'minhascidades'
