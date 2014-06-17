@@ -67,12 +67,12 @@ Deolho::Application.configure do
 
   GA.tracker = "UA-26278513-9"
 
-  default_url_options[:host] = "deolho.meurio.org.br"
+  default_url_options[:host] = "deolho.minhascidades.org.br"
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV["SENDGRID_USERNAME"],
     :password => ENV["SENDGRID_PASSWORD"],
-    :domain => "deolho.meurio.org.br",
+    :domain => "deolho.minhascidades.org.br",
     :address => "smtp.sendgrid.net",
     :port => 587,
     :authentication => :plain,
