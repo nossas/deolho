@@ -17,4 +17,6 @@
 //= require rails.validations
 //= require tag-it.min
 //= require jquery.facebox
+//= require foundation
+//= require meurio_ui
 //= require_tree .

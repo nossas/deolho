@@ -11,5 +11,6 @@
  *= require_self
  *= require jquery.ui.all
  *= require jquery.facebox
+ *= require foundation
  *= require_tree .
  */
